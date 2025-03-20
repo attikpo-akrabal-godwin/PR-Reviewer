@@ -3,6 +3,12 @@
 ## Description
 PR Reviewer is a tool designed to analyze GitHub pull requests and create detailed reports in Notion. It leverages the MCP (Model Context Protocol) to facilitate communication and integration between different services.
 
+## PRE REQUISITES
+
+- MCP https://blog.stackademic.com/model-context-protocol-mcp-in-ai-9858b5ecd9
+- Source tuto https://www.datacamp.com/tutorial/mcp-model-context-protocol
+
+
 ## Features
 - Fetch changes from GitHub pull requests.
 - Create detailed reports in Notion.
