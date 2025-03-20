@@ -1,0 +1,12 @@
+[project]
+name = "pr-reviewer"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "mcp[cli]>=1.4.1",
+    "notion-client>=2.3.0",
+    "python-dotenv>=1.0.1",
+    "requests>=2.32.3",
+]
