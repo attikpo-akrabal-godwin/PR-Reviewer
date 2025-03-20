@@ -17,7 +17,7 @@ PR Reviewer is a tool designed to analyze GitHub pull requests and create detail
 ## Installation
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/pr-reviewer.git
+    git clone https://github.com/attikpo-akrabal-godwin/PR-Reviewer.git
     cd pr-reviewer
     ```
 
@@ -46,15 +46,13 @@ PR Reviewer is a tool designed to analyze GitHub pull requests and create detail
     python pr_anayzer.py
     ```
 
-2. Use the MCP CLI to interact with the server. For example, to fetch changes from a pull request:
-    ```sh
-    mcp call fetch_pr --repo_owner your_repo_owner --repo_name your_repo_name --pr_number your_pr_number
-    ```
+2. Use the MCP Host (Claude ai) to interact with this MCP server . For example
 
-3. To create a Notion page with the PR analysis:
-    ```sh
-    mcp call create_notion_page --title "PR Analysis" --content "Detailed analysis of the pull request."
-    ```
+![Nom de la vidéo](analyse.gif)
+
+
+3. from claude ai you can  create a Notion page with the PR analysis:
+   ![Nom de la vidéo](create_notion_page.gif)
 
 ## Project Structure
 - `main.py`: Entry point for the project.
@@ -71,4 +69,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 
 ## Contact
-For any questions or inquiries, please contact [yourname@domain.com](mailto:yourname@domain.com).
+For any questions or inquiries, please contact [attikpoakrabal@gmail.com](mailto:attikpoakrabal@gmail.com).
