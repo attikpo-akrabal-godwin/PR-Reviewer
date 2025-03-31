@@ -6,6 +6,10 @@ from mcp.server.fastmcp import FastMCP
 from github_integration import fetch_pr_changes
 from notion_client import Client
 from dotenv import load_dotenv
+import imaplib
+import email
+from email.header import decode_header
+from mcp.server.fastmcp import FastMCP
 
 class PRAnalyzer:
     def __init__(self):
@@ -86,32 +90,8 @@ class PRAnalyzer:
                 traceback.print_exc(file=sys.stderr)
                 return error_msg
         
-        async def create_notion_page_old(title: str, content: str) -> str:
-            """Create a Notion page with PR analysis."""
-            print(f"Creating Notion page: {title}", file=sys.stderr)
-            try:
-                self.notion.pages.create(
-                    parent={"type": "page_id", "page_id": self.notion_page_id},
-                    properties={"title": {"title": [{"text": {"content": title}}]}},
-                    children=[{
-                        "object": "block",
-                        "type": "paragraph",
-                        "paragraph": {
-                            "rich_text": [{
-                                "type": "text",
-                                "text": {"content": content}
-                            }]
-                        }
-                    }]
-                )
-                print(f"Notion page '{title}' created successfully!", file=sys.stderr)
-                return f"Notion page '{title}' created successfully!"
-            except Exception as e:
-                error_msg = f"Error creating Notion page: {str(e)}"
-                print(error_msg, file=sys.stderr)
-                traceback.print_exc(file=sys.stderr)
-                return error_msg
         
+         
     def run(self):
         """Start the MCP server."""
         try:
